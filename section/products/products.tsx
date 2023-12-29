@@ -7,7 +7,6 @@ import ProductDelivery from "./product-delivery/product-delivery";
 import ProjectSteps from "./project-step/project-step";
 import Mission from "./mission/mission";
 import ContactUs from "./contact-us/contact-us";
-import Testimonials from "./testimonials/testimonials";
 import OurProjects from "./our-projects/our-projects";
 
 const Products = () => {

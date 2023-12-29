@@ -56,5 +56,5 @@ const gradientStyle = {
   background: "linear-gradient(90deg, #26ACE2 1.99%, #9E83BD 100%)",
   WebkitBackgroundClip: "text", // for webkit-based browsers
   color: "#yourTextColor", // Replace with your desired text color
-  display: "inline", // Ensures that the gradient is applied only to the text
+  display: "inline",
 };

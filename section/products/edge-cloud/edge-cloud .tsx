@@ -13,10 +13,10 @@ import BgEffect from "@/section/common/bgeffect";
 const EdgeCloud = () => {
   return (
     <Box sx={{ padding: { xs: "0 20px 50px 20px", md: "0 120px 80px 120px" } }}>
-      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }} alignItems={"center"}>
         <Grid item xs={12} md={6}>
-          <Box sx={{ marginTop: { xs: "-90px", md: 0 } }}>
-            <Typography variant="h2" textTransform="capitalize" sx={{ marginTop: { xs: 0, md: "60px" } }}>
+          <Box sx={{ marginTop: { xs: "-80px", md: 0 } }}>
+            <Typography variant="h2" textTransform="capitalize">
               Cutting Edge Cloud<span style={gradientStyle}>AI Components</span>
             </Typography>
             <Typography variant="body1" sx={{ my: "20px" }}>

@@ -32,6 +32,7 @@ const Mission = () => {
       <Grid
         container
         alignItems={"center"}
+        spacing={8}
       >
         <Grid
           xs={12}
@@ -40,7 +41,6 @@ const Mission = () => {
         >
           <Box
             sx={{
-              width: { xs: "100%", md: "500px" },
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
@@ -48,10 +48,7 @@ const Mission = () => {
           >
             <Typography variant="h2">Our Mission & <span style={gradientStyle}>Values</span></Typography>
             <Typography variant="body1" sx={{ my: 2 }}>
-              Lörem ipsum ede telenomi. Kropreligt donera spegåliga. Väll
-              nytinera. Plase. Eurojålig hypobel i plapp. Jåpyre padäpärat
-              trafikmaktordning och egomisa latrer. Lörem ipsum ede telenomi.
-              Kropreligt donera spegåliga.
+              Lörem ipsum ede telenomi. Kropreligt donera spegåliga. Väll nytinera. Plase. Eurojålig hypobel i plapp. Jåpyre padäpärat trafikmaktordning och egomisa latrer. Lörem ipsum ede telenomi. Kropreligt donera spegåliga.
             </Typography>
             <Box sx={{ mt: 1 }}>
               <CustomButton buttonTitle="Learn More" />

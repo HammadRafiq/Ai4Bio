@@ -13,10 +13,10 @@ import BgEffect from "@/section/common/bgeffect";
 const ComputerSolution = () => {
   return (
     <Box sx={{ padding: { xs: "0 20px 0 20px", md: "80px 120px 40px 120px" } }}>
-      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }} alignItems={"center"}>
         <Grid item xs={12} md={6}>
           <Box sx={{ marginTop: { xs: "-50px", md: 0 } }}>
-            <Typography variant="h2" textTransform="capitalize" sx={{ marginTop: { xs: 0, md: "50px" } }}>
+            <Typography variant="h2" textTransform="capitalize">
               Computer Vision solutions with <span style={gradientStyle}>personalized outputs</span>
             </Typography>
             <Typography variant="body1" sx={{ my: "20px" }}>

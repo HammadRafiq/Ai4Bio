@@ -1,16 +1,16 @@
 "use client";
 import { Box, Card, CardContent, Grid, Typography, styled } from "@mui/material";
+import { Navigation, Pagination } from 'swiper/modules';
 import Quotations from "../../../assets/quotations.png"
 import Rating from '@mui/material/Rating';
 import Testimonial1 from "../../../assets/testimonial1.png"
 import Testimonial2 from "../../../assets/testimonial2.png"
 import Testimonial3 from "../../../assets/testimonial3.png"
 import React from "react";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
+// import 'swiper/modules/navigation.scss'; // Navigation module
 import 'swiper/css';
 import Image from "next/image";
 import { gradientStyle } from "@/app/styles";
@@ -74,7 +74,7 @@ const sliderData = [
 
 const Testimonials = () => {
     return (
-        <Box sx={{ padding: { xs: "0 20px", md: "80px 120px" } }}>
+        <Box sx={{ padding: { xs: "50px 20px", md: "80px 120px" } }}>
             <Typography variant="h2" textAlign="center">
                 What Our <span style={gradientStyle}>Customers Say</span>
             </Typography>
@@ -85,9 +85,21 @@ const Testimonials = () => {
             </Box>
             <Swiper
                 spaceBetween={50}
-                slidesPerView={3}
+                // slidesPerView={3}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
+                modules={[Navigation]}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    700: {
+                        slidesPerView: 2
+                    },
+                    1200: {
+                        slidesPerView: 3
+                    }
+                }}
                 className="primary-swiper"
             >
                 {sliderData.map((item: any, index: number) => (

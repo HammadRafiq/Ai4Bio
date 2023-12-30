@@ -11,7 +11,7 @@ import { gradientStyle } from "@/app/styles";
 const ProductDelivery = () => {
   return (
     <Box
-      sx={{ background: "linear-gradient(90deg, rgba(38, 172, 226, 0.5) 1.99%, rgba(158, 131, 189, 0.3) 100%)", py: { xs: "50px", md: 0 } }}
+      sx={{ background: "linear-gradient(90deg, rgba(38, 172, 226, 0.5) 1.99%, rgba(158, 131, 189, 0.3) 100%)", padding: { xs: "50px 0", md: "20px 0 45px 0" } }}
     >
       <Grid container spacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={12} md={6}>

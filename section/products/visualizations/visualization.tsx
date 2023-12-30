@@ -12,7 +12,7 @@ import BgEffect from "@/section/common/bgeffect";
 const Visualizations = () => {
   return (
     <Box sx={{ padding: { xs: "0 20px", md: "0 120px 0 120px" } }}>
-      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }} sx={{ flexDirection: { xs: "column-reverse", md: "row" } }}>
+      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }} sx={{ flexDirection: { xs: "column-reverse", md: "row" } }} alignItems={"center"}>
         <Grid item xs={12} md={6}>
           <Box sx={{ marginTop: { xs: "-100px", md: 0 } }} position={"relative"}>
             <Image src={visualizationsChart} alt="about Chart" style={{ width: "100%", marginLeft: "-30px" }} />
@@ -21,10 +21,10 @@ const Visualizations = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box sx={styles.sectionTitle}>
-            <Typography variant="h2" maxWidth="450px" sx={{ marginTop: { xs: 0, md: "70px" } }}>
+            <Typography variant="h2" maxWidth="450px">
               Integrated <span style={gradientStyle}>Visualisations</span>
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" marginTop={"10px"} marginBottom={"20px"}>
               Lörem ipsum ede telenomi. Kropreligt donera spegåliga. Väll nytinera. Plase. Eurojålig hypobel i plapp. Jåpyre padäpärat trafikmaktordning och egomisa latrer. Lörem ipsumi. Kropreligt donera spegåliga. Väll nytinera. Plase. Eurojålig hypobel i plapp. Jåpyre padäpärat trafikmaktordning och egomisa latrer.
             </Typography>
             <CustomButton buttonTitle="Learn More" />

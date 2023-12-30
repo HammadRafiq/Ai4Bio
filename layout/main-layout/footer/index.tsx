@@ -49,12 +49,12 @@ const Footer = () => {
   return (
     <Box sx={{ padding: { xs: "50px 20px 0 20px", md: "80px 120px 0 120px" } }}>
       <Grid container spacing={{ xs: 2, md: 3 }}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={3}>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/">
               <Image src={logo} alt="logo" />
             </Link>
-            <Box sx={{ display: "flex", gap: "20px", marginTop: "20px" }}>
+            <Box sx={{ display: "flex", gap: "10px", marginTop: "20px" }}>
               <Link href="/">
                 <GradientAvatar>
                   <TwitterIcon />
@@ -78,7 +78,7 @@ const Footer = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} md={2.5}>
           <Typography variant="h4" sx={{ fontSize: "24px", fontWeight: "500", marginTop: { xs: "30px", md: 0 } }}>
             Platform
           </Typography>
@@ -90,7 +90,7 @@ const Footer = () => {
             ))}
           </List>
         </Grid>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} md={2.5}>
           <Typography variant="h4" sx={{ fontSize: "24px", fontWeight: "500" }}>
             Solutions
           </Typography>
@@ -141,8 +141,8 @@ export default Footer;
 
 //--------------------------------------------------------
 const GradientAvatar = styled(Avatar)(({ theme }) => ({
-  width: theme.spacing(6),
-  height: theme.spacing(6),
+  width: theme.spacing(5),
+  height: theme.spacing(5),
   background: "linear-gradient(90deg, #26ACE2 1.99%, #9E83BD 100%)",
   color: theme.palette.getContrastText(theme.palette.primary.main),
 }));

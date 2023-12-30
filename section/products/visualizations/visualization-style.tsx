@@ -1,9 +1,5 @@
 export const styles = {
   sectionTitle: () => ({
-    marginTop: {
-      xs: 0,
-      md: "35px"
-    },
     fontWeight: "700",
     textTransform: "capitalize",
     "& h3": {
@@ -20,8 +16,5 @@ export const styles = {
     // "& h2": {
     //   color: "#26ACE2 ",
     // },
-    "& p": {
-      marginY: "20px",
-    },
   }),
 };

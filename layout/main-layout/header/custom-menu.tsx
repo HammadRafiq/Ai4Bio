@@ -1,6 +1,7 @@
 import { Box, Menu, MenuItem, Typography } from '@mui/material';
 import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
+import { useRouter } from 'next/navigation';
 
 const CustomMenu = ({
     renderUI = <MenuIcon sx={{ fontSize: "34px" }} />,
@@ -10,7 +11,8 @@ const CustomMenu = ({
 }) => {
     const [anchorEl, setAnchorEl]: any = useState(null);
     const open = Boolean(anchorEl);
-    // const navigate = useNavigate()
+
+    const router = useRouter()
 
     const handleClose = (e: any) => {
         e.stopPropagation()
@@ -19,7 +21,7 @@ const CustomMenu = ({
 
 
     return (
-        <Box sx={{ overflow: "visible" }}>
+        <Box sx={{ overflow: "visible", zIndex: 99 }}>
             <Box
                 onClick={event => {
                     event.stopPropagation()
@@ -28,6 +30,8 @@ const CustomMenu = ({
                 sx={{
                     padding: padding,
                     cursor: "pointer",
+                    zIndex: 99,
+                    paddingLeft: open ? "30px" : "13px",
                     ...styleObj
                 }}
             >
@@ -48,7 +52,7 @@ const CustomMenu = ({
                         key={item?.title + index}
                         onClick={(e: any) => {
                             handleClose(e)
-                            // navigate(item.link)
+                            router.push(item.link)
                         }}
                     >
                         <Box style={{ display: "flex", alignItems: "center", gap: "7px" }}>

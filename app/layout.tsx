@@ -10,29 +10,7 @@ import Header from "@/layout/main-layout/header";
 import Footer from "@/layout/main-layout/footer";
 import { bgEffect } from "./styles";
 import localFont from 'next/font/local';
-
-const satoshi = localFont({
-  src: [
-    {
-      path: '../public/fonts/Satoshi-Light.woff2',
-      weight: '300',
-    },
-    {
-      path: '../public/fonts/Satoshi-Regular.woff2',
-      weight: '400',
-    },
-    {
-      path: '../public/fonts/Satoshi-Medium.woff2',
-      weight: '500',
-    },
-    {
-      path: '../public/fonts/Satoshi-Bold.woff2',
-      weight: '700',
-    },
-  ],
-});
-
-const montserrat = Montserrat({ subsets: ['latin'] })
+import BgEffect from "@/section/common/bgeffect";
 
 // export const metadata: Metadata = {
 //   title: "Ai4Bio",
@@ -48,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ background: "#fff" }}>
         <Layout>
+          <BgEffect />
           <Header />
           {children}
           <Footer />

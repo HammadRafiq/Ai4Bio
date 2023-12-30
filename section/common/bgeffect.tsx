@@ -23,8 +23,8 @@ const BgEffect = (
     return (
         <Box
             sx={{
-                height: size,
-                width: size,
+                height: { xs: "10px", lg: size },
+                width: { xs: "10px", lg: size },
                 zIndex: zIndex,
                 opacity: 0.2,
                 position: "absolute",

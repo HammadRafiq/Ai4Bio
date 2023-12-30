@@ -1,22 +1,43 @@
+"use client"
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import "./font.css"
 import { Layout } from "@/layout/root";
-import { styles } from "@/components/custom-button/custom-button-style";
-import { Box } from "@mui/material";
-import Image from "next/image";
-import bgHeroSection from "../assets/bgHeroSection.svg";
+import { Box, Typography } from "@mui/material";
 import "./globals.css"
 import Header from "@/layout/main-layout/header";
 import Footer from "@/layout/main-layout/footer";
 import { bgEffect } from "./styles";
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ["latin"] });
+const satoshi = localFont({
+  src: [
+    {
+      path: '../public/fonts/Satoshi-Light.woff2',
+      weight: '300',
+    },
+    {
+      path: '../public/fonts/Satoshi-Regular.woff2',
+      weight: '400',
+    },
+    {
+      path: '../public/fonts/Satoshi-Medium.woff2',
+      weight: '500',
+    },
+    {
+      path: '../public/fonts/Satoshi-Bold.woff2',
+      weight: '700',
+    },
+  ],
+});
 
-export const metadata: Metadata = {
-  title: "Ai4Bio",
-  description: "Turn your bio-imaging experiments into leverageable data",
-};
+const montserrat = Montserrat({ subsets: ['latin'] })
+
+// export const metadata: Metadata = {
+//   title: "Ai4Bio",
+//   description: "Turn your bio-imaging experiments into leverageable data",
+// };
 
 export default function RootLayout({
   children,
@@ -26,7 +47,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ background: "#fff" }}>
-        <Box sx={{ left: "-2px", top: "-100px", ...bgEffect }}></Box>
         <Layout>
           <Header />
           {children}

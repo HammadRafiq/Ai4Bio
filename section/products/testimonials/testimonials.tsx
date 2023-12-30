@@ -1,42 +1,46 @@
-// "use client";
-// import { SplideSlide, SplideTrack, Splide } from "@splidejs/react-splide";
-// import { Card, CardContent, Grid, Typography, styled } from "@mui/material";
-// import React from "react";
-// import "@splidejs/react-splide/css";
-// import "@splidejs/react-splide/css/skyblue";
-// import "@splidejs/react-splide/css/sea-green";
-// import "@splidejs/react-splide/css/core";
+"use client";
+import { Box, Card, CardContent, Grid, Typography, styled } from "@mui/material";
+import Quotations from "../../../assets/quotations.png"
+import Rating from '@mui/material/Rating';
+import Testimonial1 from "../../../assets/testimonial1.png"
+import Testimonial2 from "../../../assets/testimonial2.png"
+import Testimonial3 from "../../../assets/testimonial3.png"
+import React from "react";
 
-// const sliderData = [
-//   {
-//     id: 1,
-//     title: `“Incredible Experience”`,
-//     description: `"Together, we're creating a brighter future for children in foster care. Join us in reshaping the fostering landscape and making a difference, one innovative solution at a time."`,
-//     name: "Usman Saeed",
-//     desgination: "CEO, Foster App",
-//   },
-//   {
-//     id: 2,
-//     title: `“An Essential Part of Any Agency Operations”`,
-//     description: `"This software is outstanding and very user friendly. It provides the voice of the child where their outcomes are clearly highlighted by the system tools and progress reports."`,
-//     name: "Haji Younas",
-//     desgination: "Chairman & Co founder",
-//   },
-//   {
-//     id: 3,
-//     title: `“An Essential Part of Any Agency Operations”`,
-//     description: `"This software is outstanding and very user friendly. It provides the voice of the child where their outcomes are clearly highlighted by the system tools and progress reports."`,
-//     name: "Haji Younas",
-//     desgination: "Chairman & Co founder",
-//   },
-//   {
-//     id: 4,
-//     title: `“An Essential Part of Any Agency Operations”`,
-//     description: `"This software is outstanding and very user friendly. It provides the voice of the child where their outcomes are clearly highlighted by the system tools and progress reports."`,
-//     name: "Haji Younas",
-//     desgination: "Chairman & Co founder",
-//   },
-// ];
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import Image from "next/image";
+import { gradientStyle } from "@/app/styles";
+
+const sliderData = [
+    {
+        id: 1,
+        description: "any individuals have eaten in this kitchen and have proceeded to lead typical, solid lives. The route to a man’s heart is through his stomach.",
+        name: "John De Marli",
+        image: Testimonial1
+    },
+    {
+        id: 2,
+        description: "Why truly, I’ve found the JOY of cooking. It’s the point at which my better half does it. There is no sincerer love than the adoration for sustenance.",
+        name: "Robin Ayala Doe",
+        image: Testimonial2
+    },
+    {
+        id: 3,
+        description: "You don’t need to cook extravagant or muddled perfect works of art, simply great sustenance from new fixings.",
+        name: "Rowhan Smith",
+        image: Testimonial3
+    },
+    {
+        id: 4,
+        description: "Why truly, I’ve found the JOY of cooking. It’s the point at which my better half does it. There is no sincerer love than the adoration for sustenance.",
+        name: "Robin Ayala Doe",
+        image: Testimonial2
+    },
+];
 
 // const CustumeSplide = styled(Splide)`
 //   padding: 40px 0px;
@@ -66,70 +70,50 @@
 //     background: #333; /* Change the active background color as needed */
 //   }
 // `;
-// const Testimonials = () => {
-//   return (
-//     <Grid container>
-//       <Grid item>
-//         <CustumeSplide
-//           className="my-carousel"
-//           options={{
-//             width: "100%",
-//             gap: "2rem",
-//             perPage: 3,
-//           }}
-//         >
-//           {sliderData.map((item: any) => (
-//             <SplideSlide key={item.id}>
-//               <Card
-//                 sx={{
-//                   p: 2,
-//                   mt: 1,
-//                   textAlign: "center",
-//                   boxShadow: 3,
-//                   height: "100%",
-//                 }}
-//               >
-//                 <CardContent>
-//                   <Typography variant="h6">{item.title}</Typography>
-//                   <Typography
-//                     variant="subtitle2"
-//                     sx={{
-//                       color: "red",
-//                       mt: 3,
-//                       lineHeight: "28px",
-//                       fontWeight: 500,
-//                     }}
-//                   >
-//                     {item.description}
-//                   </Typography>
-//                   <Typography
-//                     variant="subtitle1"
-//                     sx={{
-//                       color: "red",
-//                       mt: 3,
-//                       fontWeight: 600,
-//                     }}
-//                   >
-//                     {item.name}
-//                   </Typography>
-//                   <Typography
-//                     variant="caption"
-//                     sx={{
-//                       color: "red",
-//                       lineHeight: "28px",
-//                       fontWeight: 500,
-//                     }}
-//                   >
-//                     {item.desgination}
-//                   </Typography>
-//                 </CardContent>
-//               </Card>
-//             </SplideSlide>
-//           ))}
-//         </CustumeSplide>
-//       </Grid>
-//     </Grid>
-//   );
-// };
 
-// export default Testimonials;
+
+const Testimonials = () => {
+    return (
+        <Box sx={{ padding: { xs: "0 20px", md: "80px 120px" } }}>
+            <Typography variant="h2" textAlign="center">
+                What Our <span style={gradientStyle}>Customers Say</span>
+            </Typography>
+            <Box textAlign="center" display={"flex"} justifyContent={"center"} marginBottom="80px" marginTop="15px">
+                <Typography variant="body1" maxWidth="450px">
+                    Lörem ipsum ede telenomi. Kropreligt donera spegåliga. Väll nytinera. Plase. Eurojålig hypobel i plapp. Jåpyre
+                </Typography>
+            </Box>
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                className="primary-swiper"
+            >
+                {sliderData.map((item: any, index: number) => (
+                    <SwiperSlide key={item.id} style={{ overflow: "visible" }}>
+                        {({ isActive, isNext }) => (
+                            <Box borderRadius={"24px"} padding={"35px"} textAlign={"center"} position={"relative"} sx={{ boxShadow: isNext ? "0px 25px 120px -30px rgba(0, 0, 0, 0.12)" : "none" }}>
+                                <Box sx={{ marginTop: "-62px", marginBottom: "20px" }}>
+                                    <Image src={item.image} alt={item.name} />
+                                </Box>
+                                <Rating name="read-only" value={5} readOnly sx={{ color: "#26ACE2" }} />
+                                <Typography sx={{ fontSize: "20px", fontWeight: 700, marginBottom: "15px" }}>
+                                    John De Marli {index}
+                                </Typography>
+                                <Typography variant="body1">
+                                    any individuals have eaten in this kitchen and have proceeded to lead typical, solid lives. The route to a man’s heart is through his stomach.
+                                </Typography>
+                                <Box position={"absolute"} top={30} left={20}>
+                                    <Image src={Quotations} alt="quotations" />
+                                </Box>
+                            </Box>
+                        )}
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </Box>
+    );
+};
+
+export default Testimonials;

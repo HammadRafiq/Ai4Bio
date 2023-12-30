@@ -8,6 +8,7 @@ import ProjectSteps from "./project-step/project-step";
 import Mission from "./mission/mission";
 import ContactUs from "./contact-us/contact-us";
 import OurProjects from "./our-projects/our-projects";
+import Testimonials from "./testimonials/testimonials";
 
 const Products = () => {
   return (
@@ -20,7 +21,7 @@ const Products = () => {
       <ProjectSteps />
       <Mission />
       <OurProjects />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <ContactUs />
     </>
   );
